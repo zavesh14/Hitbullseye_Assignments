@@ -1,18 +1,34 @@
 import java.util.*;
+import java.io.*;
+
 class Main {
-  public static void main(String[] args) {
-       String word = "parliament";
-       String anagram = "partialmen";
-       char wordArray[] = word.toCharArray();
-       char anagramArray[] = anagram.toCharArray();
-       Arrays.sort(wordArray);
-       Arrays.sort(anagramArray);
-       boolean characterCheck = Arrays.equals(wordArray, anagramArray);
-       boolean lengthCheck = wordArray.length == anagramArray.length;
-        if(lengthCheck && characterCheck){
-            System.out.println( word + " and " + anagram + " is Anagram");
+
+    public static void main(String[] args) throws Exception {
+        InputStreamReader r = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(r);
+        System.out.println("Enter the word: ");
+        String word = br.readLine();
+        System.out.println("Enter the anagram: ");
+        String anagram = br.readLine();
+
+        //   String word = "parliament";
+        //   String anagram = "partialmen";
+
+        char wordArray[] = word.toCharArray();
+        char anagramArray[] = anagram.toCharArray();
+
+        Arrays.sort(wordArray);
+        Arrays.sort(anagramArray);
+
+
+        boolean characterCheck = Arrays.equals(wordArray, anagramArray);
+        boolean lengthCheck = wordArray.length == anagramArray.length;
+        if (lengthCheck && characterCheck) {
+            System.out.println(word + " and " + anagram + " is Anagram");
         } else {
-             System.out.println(word + " and " + anagram + " is not Anagram");   
-        }    
+            System.out.println(word + " and " + anagram + " is not Anagram");
+        }
+
+
     }
 }
