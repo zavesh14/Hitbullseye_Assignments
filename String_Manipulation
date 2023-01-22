@@ -1,0 +1,43 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        HelloWorld obj2 = new HelloWorld();
+        // // obj2.reverseString("Hello World");
+        // obj2.checkPalindrome("abccba");
+        
+        obj2.removeCharFromString("abcd", 'a');
+    }
+    
+  void reverseString(String str){
+        StringBuilder obj = new StringBuilder(str);
+        String str1 = obj.reverse().toString();
+        System.out.println(str1);
+    }
+    
+    void checkPalindrome(String str){
+        boolean flag = true;
+        int len = str.length();
+        for(int i = 0; i < len/2; i++){
+            if(str.charAt(i) != str.charAt(len-i-1)){
+                flag = false;
+                break;
+            }
+        }
+        
+        // System.out.println(str + " is palindrome = " + flag);
+        if(flag){
+            System.out.println("Palindrome");
+        }else {
+            System.out.println("Not a Palindrome");
+        }
+        
+    }
+    
+    void removeCharFromString(String str, char ch){
+        String str1 = str.replaceAll(String.valueOf(ch), "");
+        System.out.println(str1);
+    }
+    
+}
