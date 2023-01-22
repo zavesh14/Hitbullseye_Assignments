@@ -3,7 +3,7 @@ import java.lang.*;
 import java.util.*;
 class Main {
     public static void main(String[] args) {
-        String name = "Deepak Kumar Sharma";
+        String name = "Deepak Sharma";
         String str1 = "Deepak" ;
         str1.concat("Sharma");
         
