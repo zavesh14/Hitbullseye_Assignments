@@ -24,3 +24,9 @@ class Main {
     }
     
 }
+
+/*
+Output: 
+[d, g, o] [d, g, o]
+dog and god are made with same character
+*/
