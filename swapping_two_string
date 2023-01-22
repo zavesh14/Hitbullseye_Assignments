@@ -1,0 +1,17 @@
+
+import java.lang.*;
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+       String str1 = "dog";
+       String str2 = "god";
+       System.out.println("Before swapping we have " + str1 + " and " + str2);
+       str1 = str1 + str2;
+       str2 = str1.substring(0, str1.length() - str2.length());
+       str1 = str1.substring(str2.length());
+       System.out.println();
+       System.out.println("After swapping we have " + str1 + " and " + str2);
+      
+    }
+    
+}
